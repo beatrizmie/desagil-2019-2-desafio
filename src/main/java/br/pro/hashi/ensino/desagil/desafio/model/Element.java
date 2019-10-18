@@ -1,23 +1,27 @@
 package br.pro.hashi.ensino.desagil.desafio.model;
 
 public class Element {
-    protected int row;
-    protected int col;
+  protected int row;
+  protected int col;
 
-    protected Element(int row, int col) {
-        this.row = row;
-        this.col = col;
-    }
+  protected Element(int row, int col) {
+    this.row = row;
+    this.col = col;
+  }
 
-    public int getRow() {
-        return row;
-    }
+  public int getRow() {
+    return row;
+  }
 
-    public void setRow(int row) { this.row = row; }
+  public void setRow(int row) {
+    this.row = row;
+  }
 
-    public int getCol() {
-        return col;
-    }
+  public int getCol() {
+    return col;
+  }
 
-	public void setCol(int col) { this.col = col; }
+  public void setCol(int col) {
+    this.col = col;
+  }
 }

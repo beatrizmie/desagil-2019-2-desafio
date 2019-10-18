@@ -1,24 +1,25 @@
 package br.pro.hashi.ensino.desagil.desafio.model;
 
 public abstract class Player extends Element {
-    protected final Board board;
-    private int points;
+  protected final Board board;
+  private int points;
 
-    protected Player(int row, int col, Board board) {
-        super(row, col);
-        this.board = board;
-    }
+  protected Player(int row, int col, Board board) {
+    super(row, col);
+    this.board = board;
+    this.points = 0;
+  }
 
-    protected void move(int rowShift, int colShift) {
-        row += rowShift;
-        col += colShift;
-    }
+  protected void move(int rowShift, int colShift) {
+    row += rowShift;
+    col += colShift;
+  }
 
-    public int getPoints() {
-    	return points;
-	}
+  public int getPoints() {
+    return points;
+  }
 
-	public void incrementPoints() {
-    	this.points++;
-	}
+  public void incrementPoints() {
+    this.points++;
+  }
 }

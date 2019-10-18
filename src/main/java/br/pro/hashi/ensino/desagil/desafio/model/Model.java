@@ -3,50 +3,51 @@ package br.pro.hashi.ensino.desagil.desafio.model;
 import java.util.Random;
 
 public class Model {
-    private final Board board;
-    private Element target;
-    private final HumanPlayer humanPlayer;
-    private final CpuPlayer cpuPlayer;
+  private final Board board;
+  private final Element target;
+  private final HumanPlayer humanPlayer;
+  private final CpuPlayer cpuPlayer;
 
-    public Model() {
-        board = new Board("board.txt");
+  public Model() {
+    board = new Board("board.txt");
 
-        humanPlayer = new HumanPlayer(0, 0, board);
+    humanPlayer = new HumanPlayer(0, 0, board);
 
-        cpuPlayer = new CpuPlayer(8, 18, board);
+    cpuPlayer = new CpuPlayer(8, 18, board);
 
-        target = new Element(0, 0);
+    target = new Element(0, 0);
 
-        chooseRandomTarget();
-    }
+    chooseRandomTarget();
 
-    public Board getBoard() {
-        return board;
-    }
+  }
 
-    public Element getTarget() {
-        return target;
-    }
+  public Board getBoard() {
+    return board;
+  }
 
-    public HumanPlayer getHumanPlayer() {
-        return humanPlayer;
-    }
+  public Element getTarget() {
+    return target;
+  }
 
-    public CpuPlayer getCpuPlayer() {
-        return cpuPlayer;
-    }
+  public HumanPlayer getHumanPlayer() {
+    return humanPlayer;
+  }
 
-    public void chooseRandomTarget() {
-    	int positions[][] = {
-    		{ 2, 2 },
-			{ 2, 16 },
-			{ 6, 16 },
-			{ 8, 6 },
-			{ 6, 6 },
-			{ 4, 14 }
-    	};
-		int randomIndex = new Random().nextInt(positions.length);
-		target.setRow(positions[randomIndex][0]);
-		target.setCol(positions[randomIndex][1]);
-	}
+  public CpuPlayer getCpuPlayer() {
+    return cpuPlayer;
+  }
+
+  public void chooseRandomTarget() {
+    int[][] positions = {
+      {2, 2},
+      {2, 16},
+      {6, 16},
+      {8, 6},
+      {6, 6},
+      {4, 14}
+    };
+    int randomIndex = new Random().nextInt(positions.length);
+    target.setRow(positions[randomIndex][0]);
+    target.setCol(positions[randomIndex][1]);
+  }
 }
